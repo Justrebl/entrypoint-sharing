@@ -1,15 +1,3 @@
-export ACA_JOB_NAME="aca-job-ghapp-runner-python"
-export ACA_RESOURCE_GROUP="rg-gh-oidc-demo"
-export ACA_ENVIRONMENT="aca-env-gh-bycn-oidc-demo"
-export CONTAINER_REGISTRY_NAME="acrjskubeeducwe"
-export CONTAINER_IMAGE_NAME="gh-runner-python:ghapp-1.0"
-export GH_OWNER="innovation-toolbox"
-export ORG_NAME="innovation-toolbox"
-export GH_APP_CLIENT_ID="926833"
-export GH_APP_INSTALLATION_ID="52060931"
-export GH_APP_PRIVATE_KEY="$(cat "../organization/gh_app/pvkey.pem")"
-export CONTAINER_APP_ENVIRONMENT_IDENTITY_ID="/subscriptions/fbcfc68c-3c2e-4ff7-bea4-da2642809f50/resourceGroups/rg-gh-oidc-demo/providers/Microsoft.ManagedIdentity/userAssignedIdentities/userid-gh-bycn-oidc-demo"
-
 az containerapp job create -n "$ACA_JOB_NAME" -g "$ACA_RESOURCE_GROUP" --environment "$ACA_ENVIRONMENT" \
         --trigger-type Event \
         --replica-timeout 3600 \
