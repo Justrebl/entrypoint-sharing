@@ -2,7 +2,7 @@
 
 generate_jwt() {
     local client_id="$1"
-    local pem="$2"
+    local private_key="$2"
     local now=$(date +%s)
     local iat=$((${now} - 60)) # Issues 60 seconds in the past
     local exp=$((${now} + 600)) # Expires 10 minutes in the future
@@ -27,7 +27,7 @@ generate_jwt() {
     # Signature
     local header_payload="${header}"."${payload}"
     local signature=$(
-        openssl dgst -sha256 -sign <(echo -n "${pem}") \
+        openssl dgst -sha256 -sign <(echo -n "${private_key}") \
         <(echo -n "${header_payload}") | b64enc
     )
 
