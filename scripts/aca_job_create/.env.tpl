@@ -1,0 +1,14 @@
+ACA_JOB_NAME="<ACA-Job-Name>" #Name of the job to be created
+ACA_RESOURCE_GROUP="<ACA-RG-Name>"
+ACA_ENVIRONMENT="<ACA-Environment-Name>"
+CONTAINER_REGISTRY_NAME="<ACR-Name>"
+CONTAINER_IMAGE_NAME="<Repository:tag>" #Format : gh-runner-agent:v1
+GH_OWNER="<YOUR_GH_ORG>"
+ORG_NAME="<YOUR_GH_ORG>"
+GH_APP_CLIENT_ID="<CLIENT-ID>"
+GH_APP_INSTALLATION_ID="<INSTALLATION-ID>"
+GH_APP_PRIVATE_KEY=""
+LABELS="org,python"
+REGISTRATION_TOKEN_API_URL="https://api.github.com/orgs/<YOUR_ORG>/actions/runners/registration-token"
+GH_URL="https://github.com/<YOUR_ORG>"
+CONTAINER_APP_ENVIRONMENT_IDENTITY_ID="/subscriptions/<SUB-ID>/resourceGroups/<RG-Name>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<MI-Name>"
