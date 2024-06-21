@@ -1,4 +1,4 @@
-name: Deploy App Service Python
+name: Create ACA Job Self-Hosted Runner
 
 on:
   #push:
