@@ -50,7 +50,7 @@ jobs:
 
       - name: Deleted ACA job
         run: |
-          az containerapp job delete --name ${{env.ACA_JOB_NAME}} --resource-group ${{env.ACA_RESOURCE_GROUP}} --environment ${{env.ACA_ENVIRONMENT}} --yes
+          az containerapp job delete --name ${{env.ACA_JOB_NAME}} --resource-group ${{env.ACA_RESOURCE_GROUP}} --yes
         continue-on-error: true
 
       - name: Create ACA job
